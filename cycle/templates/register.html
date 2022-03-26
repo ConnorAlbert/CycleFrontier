@@ -8,35 +8,51 @@
         body {
             background-image: url('https://www.datocms-assets.com/57394/1646331655-tcf_ws_home_02_gameoverview_slide_05.jpg?auto=format&w=1920');
             }
+            .btn-secondary {
+                border: black;
+                background-color: #007bff;
+            }
         </style>
+        <div class="container">
+            <form method="POST" class="form-register" style="color:white">
+                {{ form.hidden_tag() }}
+            <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+            <h2 class="heading-section"></h2>
+            </div>
+            </div>
+            <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+            <div class="login-wrap p-0">
+            <h3 class="mb-4 text-center">Register</h3>
+            <form action="#" class="signin-form">
+            <div class="form-group">
+                {{ form.username(class="form-control", placeholder="User Name") }}
+            </div>
+            <div class="form-group">
+                {{ form.email_address(class="form-control", placeholder="Email Address") }}
+            </div>
+            <div class="form-group">
+                {{ form.password1(class="form-control", placeholder="Password") }}
+            </div>
+            <div class="form-group">
+                {{ form.password2(class="form-control", placeholder="Confirm Password") }}
+            </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-lg btn-block btn-secondary") }}
+            </div>
+            <div class="form-group d-md-flex">
+        
     <div class="container">
         <form method="POST" class="form-register" style="color:white">
-            {{ form.hidden_tag() }}
+            
             <img class="mb-4" src="" alt="">
-            <h1 class="h3 mb-3 font-weight-normal">
-                Please Create your Account
-            </h1>
-            <br>
-            {{ form.username.label() }}
-            {{ form.username(class="form-control", placeholder="User Name") }}
-
-            {{ form.email_address.label() }}
-            {{ form.email_address(class="form-control", placeholder="Email Address") }}
-
-            {{ form.password1.label() }}
-            {{ form.password1(class="form-control", placeholder="Password") }}
-
-            {{ form.password2.label() }}
-            {{ form.password2(class="form-control", placeholder="Confirm Password") }}
-
-            <br>
 
             <div class="checkbox mb-3">
                <h6>Already have an account?</h6>
                <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Login</a>
             </div>
 
-            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
 
         </form>
     </div>

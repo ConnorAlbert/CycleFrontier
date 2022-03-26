@@ -9,7 +9,6 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
       <title>
           {% block title %}
-
           {% endblock %}
       </title>
    </head>
@@ -27,78 +26,78 @@
           }
 
         </style>
-    <nav class="navbars navbar-expand-md navbar-dark ">
+        <nav class="navbars navbar-expand-md navbar-dark ">
         
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <img src="https://www.datocms-assets.com/57394/1643111911-tcf-logo-colour.png?auto=format&dpr=0.51&w=6131" height="80" alt="">
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link"  href="{{ url_for('home_page') }}" >Home <span class="sr-only" >(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a href="{{ url_for('crafting_page') }}" class="nav-link">Crafting</a>
-            </li>
-            <li class="nav-item active">
-                <a href="{{ url_for('quarters_page') }}" class="nav-link">Quarters</a>
-            </li>
-            <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Maps
-                </a>
-                <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="{{ url_for('first_map') }}">Bright Sands</a></li>
-                  <li><a class="dropdown-item" href="{{ url_for('second_map') }}">Crescent Falls</a></li>
-
-                </ul>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <img src="https://www.datocms-assets.com/57394/1643111911-tcf-logo-colour.png?auto=format&dpr=0.51&w=6131" height="80" alt="">
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link"  href="{{ url_for('home_page') }}" >Home <span class="sr-only" >(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="{{ url_for('crafting_page') }}" class="nav-link">Crafting</a>
+                </li>
+                <li class="nav-item active">
+                  <a href="{{ url_for('quarters_page') }}" class="nav-link">Quarters</a>
               </li>
-        </ul>
-          {% if current_user.is_authenticated %}
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" style="color: lawngreen; font-weight: bold">
-                        <i class="fas fa-coins"></i>
-                        {{ current_user.prettier_budget }}
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Maps
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">Welcome, {{ current_user.username }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{ url_for('logout_page') }}">Logout</a>
-                </li>
+                    <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="{{ url_for('first_map') }}">Bright Sands</a></li>
+                      <li><a class="dropdown-item" href="{{ url_for('second_map') }}">Crescent Falls</a></li>
+    
+                    </ul>
+                  </li>
             </ul>
-          {% else %}
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{ url_for('login_page') }}">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{ url_for('register_page') }}">Register</a>
-                </li>
-            </ul>
-          {% endif %}
-      </div>
-    </nav>
-      {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-           {% for category, message in messages %}
-              <div class="alert alert-{{ category }}">
-                  <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-                  {{ message }}
-              </div>
-           {% endfor %}
-        {% endif %}
-      {% endwith %}
-      {% block content %}
-
-      {% endblock %}
+              {% if current_user.is_authenticated %}
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: lawngreen; font-weight: bold">
+                            <i class="fas fa-coins"></i>
+                            {{ current_user.prettier_budget }}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Welcome, {{ current_user.username }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('logout_page') }}">Logout</a>
+                    </li>
+                </ul>
+              {% else %}
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('login_page') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('register_page') }}">Register</a>
+                    </li>
+                </ul>
+              {% endif %}
+          </div>
+        </nav>
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+               {% for category, message in messages %}
+                  <div class="alert alert-{{ category }}">
+                      <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      {{ message }}
+                  </div>
+               {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}
+    
+          {% endblock %}
       <!-- Future Content here -->
       
       
