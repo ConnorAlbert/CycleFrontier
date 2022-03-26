@@ -21,14 +21,8 @@
             z-index: 10 !important;
             font-size: 25px;
             }
-        .nav-item {
-            size: 100px;
-        }
         body {
           background-image: url('https://www.datocms-assets.com/57394/1640093323-thecyclefrontierkeyart1440pnologo.png?auto=format&w=2560');
-          min-height: 800px;
-          background-position: top;
-          background-repeat: no-repeat;
           background-size: cover;
           }
 
@@ -46,19 +40,19 @@
             <li class="nav-item active">
                 <a class="nav-link"  href="{{ url_for('home_page') }}" >Home <span class="sr-only" >(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a href="#Crafting" class="nav-link">Crafting</a>
+            <li class="nav-item active">
+                <a href="{{ url_for('crafting_page') }}" class="nav-link">Crafting</a>
             </li>
-            <li class="nav-item">
-                <a href="#contact" class="nav-link">Upgrades</a>
+            <li class="nav-item active">
+                <a href="{{ url_for('quarters_page') }}" class="nav-link">Quarters</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Maps
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="">Bright Sands</a></li>
-                  <li><a class="dropdown-item" href="">Crescent Falls</a></li>
+                <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="{{ url_for('first_map') }}">Bright Sands</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('second_map') }}">Crescent Falls</a></li>
 
                 </ul>
               </li>
@@ -75,16 +69,16 @@
                     <a class="nav-link">Welcome, {{ current_user.username }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('logout_page') }}">Logout</a>
+                    <a class="nav-link active" href="{{ url_for('logout_page') }}">Logout</a>
                 </li>
             </ul>
           {% else %}
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('login_page') }}">Login</a>
+                    <a class="nav-link active" href="{{ url_for('login_page') }}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('register_page') }}">Register</a>
+                    <a class="nav-link active" href="{{ url_for('register_page') }}">Register</a>
                 </li>
             </ul>
           {% endif %}
@@ -106,7 +100,6 @@
 
       {% endblock %}
       <!-- Future Content here -->
-
       
       
 

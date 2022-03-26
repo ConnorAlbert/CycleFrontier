@@ -52,3 +52,18 @@ def logout_page():
     return redirect(url_for("home_page"))
 
 
+@app.route('/bright')
+def first_map():
+    return render_template('bright.html')
+
+@app.route('/cresent')
+def second_map():
+    return render_template('crescent.html')
+
+@app.route('/crafting')
+def crafting_page():
+    return render_template('crafting.html')
+
+@app.route('/upgrades')
+def quarters_page():
+    return render_template('quarters.html')
