@@ -4,6 +4,7 @@ from cycle.models import User
 from cycle.forms import RegisterForm, LoginForm
 from cycle import db
 from flask_login import login_user, logout_user, login_required, current_user
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 @app.route('/')
@@ -16,14 +17,13 @@ def home_page():
 def register_page():
     form = RegisterForm()
     if form.validate_on_submit():
-        user_to_create = User(username=form.username.data,
-                              email_address=form.email_address.data,
-                              password=form.password1.data)
-        db.session.add(user_to_create)
+        hashed_password = generate_password_hash(form.password1.data, method='sha256')
+        new_user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+        db.session.add(new_user)
         db.session.commit()
-        login_user(user_to_create)
+        login_user(new_user)
         flash(
-            f"Account created successfully! You are now logged in as {user_to_create.username}", category='success')
+            f"Account created successfully! You are now logged in as {new_user.username}", category='success')
         return redirect(url_for('home_page'))
     if form.errors != {}:  # If there are not errors from the validations
         for err_msg in form.errors.values():
@@ -37,15 +37,13 @@ def register_page():
 def login_page():
     form = LoginForm()
     if form.validate_on_submit():
-        attempted_user = User.query.filter_by(
-            username=form.username.data).first()
-        if attempted_user and attempted_user.check_password_correction(
-                attempted_password=form.password.data
-        ):
-            login_user(attempted_user)
+        user = User.query.filter_by(username=form.username.data).first()
+        if user:
+            if check_password_hash(user.password, form.password.data):
+                login_user(user, remember=form.remember.data)
             flash(
-                f'Success! You are logged in as: {attempted_user.username}', category='success')
-            return redirect(url_for('market_page'))
+                f'Success! You are logged in as: {user.username}', category='success')
+            return redirect(url_for('home_page'))
         else:
             flash('Username and password are not match! Please try again',
                   category='danger')
