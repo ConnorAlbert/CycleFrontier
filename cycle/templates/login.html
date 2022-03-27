@@ -9,18 +9,19 @@
         body {
             background-image: url('https://www.datocms-assets.com/57394/1646331650-tcf_ws_home_02_gameoverview_slide_04.jpg?auto=format&w=1920');
             }
-            .btn-secondary {
-                border: black;
-                background-color: #007bff;
+        .btn-secondary {
+            border: black;
+            background-color: #007bff;
             }
         </style>
         <div class="container">
+            <div class="">
             <form method="POST" class="form-signin" style="color:white">
                 {{ form.hidden_tag() }}
-            <div class="row justify-content-center">
-            <div class="col-md-6 text-center mb-5">
-            <h2 class="heading-section">Login</h2>
-            </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-4 p-3">
+                        <img src="https://www.datocms-assets.com/57394/1643111922-the-cycle-logo-final-bw-horizon2_white.png?auto=format&dpr=0.51&w=2767" height="80" alt="">
+                </div>
             </div>
             <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
@@ -51,11 +52,14 @@
             <p class="w-100 text-center">— Or Register with —</p>
             <a class="btn btn-sm btn-secondary" href="{{ url_for('register_page') }}">Register</a>
             <div class="social d-flex text-center">
+                <div class="col-md-6 text-center mb-5">
             </div>
             </div>
             </div>
             </div>
             </div>
+            </div>
+        </div>
     </div>
 </body>
 {% endblock %}

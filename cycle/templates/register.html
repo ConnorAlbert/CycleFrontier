@@ -12,7 +12,9 @@
                 border: black;
                 background-color: #007bff;
             }
+
         </style>
+        <div class="">
         <div class="container">
             <form method="POST" class="form-register" style="color:white">
                 {{ form.hidden_tag() }}
@@ -23,9 +25,9 @@
             </div>
             <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
-            <div class="login-wrap p-0">
-            <h3 class="mb-4 text-center">Register</h3>
-            <form action="#" class="signin-form">
+            <div class="login-wrap p-1">
+                <img src="https://www.datocms-assets.com/57394/1643111922-the-cycle-logo-final-bw-horizon2_white.png?auto=format&dpr=0.51&w=2767" height="80" alt="">
+                <div><br></div>
             <div class="form-group">
                 {{ form.username(class="form-control", placeholder="User Name") }}
             </div>
@@ -52,6 +54,7 @@
                <h6>Already have an account?</h6>
                <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Login</a>
             </div>
+        </div>
 
 
         </form>

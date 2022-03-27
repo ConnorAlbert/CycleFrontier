@@ -14,19 +14,43 @@
    </head>
    <body>
     <style>
+      .navbar {
+          background-image: url('https://cdn.discordapp.com/attachments/497275127264706561/957516181818974248/Untitled-222222.png');
+          background-position: 0%;
+          background-repeat: no-repeat;
+          background-size: 40%;         
+          padding-top: 0px;
+          padding-right: 0px;
+          padding-bottom: 0px;
+        }
         .collapse {
             position: sticky !important;
-            top: 0 !important;
-            z-index: 10 !important;
             font-size: 25px;
+            background-image: url('https://cdn.discordapp.com/attachments/497275127264706561/957518354166468608/Untitled-2222223333.png');
+            background-position: 100%;
+            background-size: 40%;
+            background-repeat: no-repeat;
+            padding-right: 0px;
             }
+          
         body {
           background-image: url('https://www.datocms-assets.com/57394/1640093323-thecyclefrontierkeyart1440pnologo.png?auto=format&w=2560');
           background-size: cover;
           }
+          .dropdown-menu.show {
+            z-index: 5000;
+            background-color: grey;
+          }
+          .dropdown-item:hover  {
+            z-index: 5000;
+            background-color: rgb(65, 65, 65);
+          }
+          .nav-link:hover {
+            background-color: rgb(65, 65, 65);
+          }
 
         </style>
-        <nav class="navbars navbar-expand-md navbar-dark ">
+        <nav class="navbar navbar-expand-sm navbar-dark">
         
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -34,7 +58,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <img src="https://www.datocms-assets.com/57394/1643111911-tcf-logo-colour.png?auto=format&dpr=0.51&w=6131" height="80" alt="">
+                  <img src="https://www.datocms-assets.com/57394/1643111919-the-cycle-logo-final-bw-horizon2_black.png?auto=format&dpr=0.5&w=2752" height="60" alt="">
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link"  href="{{ url_for('home_page') }}" >Home <span class="sr-only" >(current)</span></a>
@@ -49,10 +73,9 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Maps
                     </a>
-                    <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="{{ url_for('first_map') }}">Bright Sands</a></li>
-                      <li><a class="dropdown-item" href="{{ url_for('second_map') }}">Crescent Falls</a></li>
-    
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item text-white" href="{{ url_for('first_map') }}">Bright Sands</a></li>
+                      <li><a class="dropdown-item text-white" href="{{ url_for('second_map') }}">Crescent Falls</a></li>
                     </ul>
                   </li>
             </ul>
