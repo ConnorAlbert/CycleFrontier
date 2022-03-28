@@ -72,7 +72,3 @@ def second_map():
 def crafting_page():
     return render_template('crafting.html')
 
-
-@app.route('/upgrades')
-def quarters_page():
-    return render_template('quarters.html')
