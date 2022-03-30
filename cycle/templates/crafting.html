@@ -1,91 +1,641 @@
 {% extends 'base.html' %} {% block title %} Crafting Page {% endblock %} {%
 block content %}
 <style>
-  .card-img-top {
-    width: 303px;
-  }
-  h1 {
-    text-align: center;
-  }
+  
   body {
+    background-color: black !important;
     background-image: none;
-    background-color: black;
+    
+  }
+  .image1 {
+    width: 100%;
+  }
+  .image2 {
+    width: 100%;
+  }
+  .nav-link {
+    color: black;
+    border: 1px;
+    border-color: black !important;
+  }
+  .nav {
+    margin-left: 30%;
+    margin-bottom: 2%;
+    border: none !important;
+  }
+  .nav-link-active {
+    color: blue !important;
   }
   
 </style>
 <body>
   <nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Backpacks/Weapons/Consumables</button>
-      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#backpack" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Armor</button>
-      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#weapons" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Weapons</button>
+    <ul class="nav nav-tabs pt-2" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active mr-2" id="home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="home" aria-selected="true">All items</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link mr-2" id="profile-tab" data-bs-toggle="tab" data-bs-target="#backpack" type="button" role="tab" aria-controls="profile" aria-selected="false">Backpacks</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link mr-2" id="contact-tab" data-bs-toggle="tab" data-bs-target="#weapon" type="button" role="tab" aria-controls="contact" aria-selected="false">Weapons</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link mr-2" id="contact-tab" data-bs-toggle="tab" data-bs-target="#armor" type="button" role="tab" aria-controls="contact" aria-selected="false">Armor</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link mr-2" id="contact-tab" data-bs-toggle="tab" data-bs-target="#consumable" type="button" role="tab" aria-controls="contact" aria-selected="false">Consumable</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link " id="contact-tab" data-bs-toggle="tab" data-bs-target="#attachments" type="button" role="tab" aria-controls="contact" aria-selected="false">Attachments</button>
+  </li>
+</ul>
       
       
     </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><img class="image1" src="https://i.ibb.co/mzWQfBy/green-backpack.png" />
-      <img class="image2" src="https://i.ibb.co/PQhPCzh/green-backpackres.png" />
-      <img class="image1" src="https://i.ibb.co/xJkft1J/Screenshot-1.png" />
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/mzWQfBy/green-backpack.png" />
+            <img class="image2" src="https://i.ibb.co/PQhPCzh/green-backpackres.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/xJkft1J/Screenshot-1.png" />
       <img class="image2" src="https://i.ibb.co/ys9q6mr/Screenshot-2.png" />  
-      <img class="image1" src="https://i.ibb.co/ThNR0wP/purple-backpack.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/ThNR0wP/purple-backpack.png" />
       <img class="image2" src="https://i.ibb.co/LQT7X91/purple-backpackres.png" />
-      <img class="image1" src="https://i.ibb.co/9nJcCZ5/Karma.png" />
-      <img class="image2" src="https://i.ibb.co/S6JkKTT/Karmares.png" />
-      <img class="image1" src="https://i.ibb.co/VSbsdxF/komrad.png" />
-      <img class="image2" src="https://i.ibb.co/mHbfGVm/komradres.png" />  
-      <img class="image1" src="https://i.ibb.co/Z86CvzD/zeus.png" />
-      <img class="image2" src="https://i.ibb.co/59dZ7Lw/zeusres.png" />  
-      <img class="image1" src="https://i.ibb.co/1mzRxwQ/Screenshot-1.png" />
-      <img class="image2" src="https://i.ibb.co/mXk4rwh/Screenshot-2.png" />  
-      <img class="image1" src="https://i.ibb.co/xm5Lt72/Screenshot-3.png" />
-      <img class="image2" src="https://i.ibb.co/khRdgKz/Screenshot-4.png" />  
-      <img class="image1" src="https://i.ibb.co/R9Cs582/Screenshot-5.png" />
-      <img class="image2" src="https://i.ibb.co/qkzpdBG/Screenshot-6.png" />  
-      <img class="image1" src="https://i.ibb.co/HCBNjzc/Screenshot-7.png" />
-      <img class="image2" src="https://i.ibb.co/qmVhyK0/Screenshot-8.png" />  
-      <img class="image1" src="https://i.ibb.co/98Kd90r/Screenshot-9.png" />
-      <img class="image2" src="https://i.ibb.co/H7Hdh2x/Screenshot-10.png" />  
-      <img class="image1" src="https://i.ibb.co/wCzQPf5/Screenshot-11.png" />
-      <img class="image2" src="https://i.ibb.co/8NMnk3j/Screenshot-12.png" />  
+          </div>
         </div>
-    <div class="tab-pane fade" id="backpack" role="tabpanel" aria-labelledby="nav-profile-tab"><div class="parent">  
-    </div><img class="image1" src="https://i.ibb.co/D8fLsxq/Screenshot-1.png" />
-    <img class="image2" src="https://i.ibb.co/q7Gw26N/Screenshot-2.png" />  
-    <img class="image1" src="https://i.ibb.co/W5Hxp0c/Screenshot-3.png" />
-    <img class="image2" src="https://i.ibb.co/zH9Fknw/Screenshot-4.png" />  
-    <img class="image1" src="https://i.ibb.co/8KChbLS/Screenshot-9.png" />
-    <img class="image2" src="https://i.ibb.co/xmQF4yJ/Screenshot-10.png" />  
-    <img class="image1" src="https://i.ibb.co/xs7BhGD/Screenshot-7.png" />
-    <img class="image2" src="https://i.ibb.co/fd04S12/Screenshot-8.png" />  
-    <img class="image1" src="https://i.ibb.co/9t7vVSh/Screenshot-5.png" />
-    <img class="image2" src="https://i.ibb.co/b38xh6f/Screenshot-6.png" />  
-    <img class="image1" src="https://i.ibb.co/Q6zLByD/Screenshot-11.png" />
-    <img class="image2" src="https://i.ibb.co/5GC68cs/Screenshot-12.png" />  
-    <img class="image1" src="https://i.ibb.co/LYgkvhL/Screenshot-13.png" />
-    <img class="image2" src="https://i.ibb.co/k1FTsCN/Screenshot-14.png" />  
-    <img class="image1" src="https://i.ibb.co/KxJwCrG/Screenshot-15.png" />
-    <img class="image2" src="https://i.ibb.co/RBwPCJw/Screenshot-16.png" />  
-    <img class="image1" src="https://i.ibb.co/vkz0KBs/Screenshot-21.png" />
-    <img class="image2" src="https://i.ibb.co/6FHLFKB/Screenshot-22.png" />  
-    <img class="image1" src="https://i.ibb.co/hgBwPdr/Screenshot-19.png" />
-    <img class="image2" src="https://i.ibb.co/KjWy771/Screenshot-20.png" />  
-    <img class="image1" src="https://i.ibb.co/myZpVB8/Screenshot-17.png" />
-    <img class="image2" src="https://i.ibb.co/CBryxDD/Screenshot-18.png" />  
-    <img class="image1" src="https://i.ibb.co/3C3n7R1/Screenshot-23.png" />
-    <img class="image2" src="https://i.ibb.co/G9jHf6G/Screenshot-24.png" />  
-    <img class="image1" src="https://i.ibb.co/MC1cbws/Screenshot-25.png" />
-    <img class="image2" src="https://i.ibb.co/FDbV1Qs/Screenshot-26.png" />  
-    <img class="image1" src="https://i.ibb.co/9Y4Dv8V/Screenshot-27.png" />
-    <img class="image2" src="https://i.ibb.co/dBRgQvG/Screenshot-28.png" />  
-    <img class="image1" src="https://i.ibb.co/ZH8cHt9/Screenshot-29.png" />
-    <img class="image2" src="https://i.ibb.co/8c3WMmN/Screenshot-30.png" />  
-    <img class="image1" src="https://i.ibb.co/dgCNtKZ/Screenshot-31.png" />
-    <img class="image2" src="https://i.ibb.co/hmn87kM/Screenshot-32.png" />  
-    <img class="image1" src="https://i.ibb.co/KxFPs9v/Screenshot-33.png" />
-    <img class="image2" src="https://i.ibb.co/vzM32jc/Screenshot-34.png" /></div>
-    <div class="tab-pane fade" id="weapons" role="tabpanel" aria-labelledby="nav-contact-tab"><div class="parent">
-    </div></div><p>asfsd</p></div>
-  </div>
+        <div class="row align-items-center">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/9nJcCZ5/Karma.png" />
+      <img class="image2" src="https://i.ibb.co/S6JkKTT/Karmares.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/VSbsdxF/komrad.png" />
+      <img class="image2" src="https://i.ibb.co/mHbfGVm/komradres.png" /> 
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/Z86CvzD/zeus.png" />
+      <img class="image2" src="https://i.ibb.co/59dZ7Lw/zeusres.png" />  
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/1mzRxwQ/Screenshot-1.png" />
+      <img class="image2" src="https://i.ibb.co/mXk4rwh/Screenshot-2.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/xm5Lt72/Screenshot-3.png" />
+      <img class="image2" src="https://i.ibb.co/khRdgKz/Screenshot-4.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/R9Cs582/Screenshot-5.png" />
+      <img class="image2" src="https://i.ibb.co/qkzpdBG/Screenshot-6.png" /> 
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/HCBNjzc/Screenshot-7.png" />
+      <img class="image2" src="https://i.ibb.co/qmVhyK0/Screenshot-8.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/98Kd90r/Screenshot-9.png" />
+      <img class="image2" src="https://i.ibb.co/H7Hdh2x/Screenshot-10.png" /> 
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/wCzQPf5/Screenshot-11.png" />
+      <img class="image2" src="https://i.ibb.co/8NMnk3j/Screenshot-12.png" /> 
+          </div>
+          <div class="container">
+          <div class="row align-items-start">
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/D8fLsxq/Screenshot-1.png" />
+        <img class="image2" src="https://i.ibb.co/q7Gw26N/Screenshot-2.png" />  
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/W5Hxp0c/Screenshot-3.png" />
+        <img class="image2" src="https://i.ibb.co/zH9Fknw/Screenshot-4.png" />  
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/8KChbLS/Screenshot-9.png" />
+        <img class="image2" src="https://i.ibb.co/xmQF4yJ/Screenshot-10.png" />  
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/xs7BhGD/Screenshot-7.png" />
+        <img class="image2" src="https://i.ibb.co/fd04S12/Screenshot-8.png" />  
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/9t7vVSh/Screenshot-5.png" />
+        <img class="image2" src="https://i.ibb.co/b38xh6f/Screenshot-6.png" />  
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/Q6zLByD/Screenshot-11.png" />
+        <img class="image2" src="https://i.ibb.co/5GC68cs/Screenshot-12.png" />  
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/LYgkvhL/Screenshot-13.png" />
+        <img class="image2" src="https://i.ibb.co/k1FTsCN/Screenshot-14.png" />  
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/KxJwCrG/Screenshot-15.png" />
+        <img class="image2" src="https://i.ibb.co/RBwPCJw/Screenshot-16.png" /> 
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/vkz0KBs/Screenshot-21.png" />
+        <img class="image2" src="https://i.ibb.co/6FHLFKB/Screenshot-22.png" />
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row align-items-start">
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/hgBwPdr/Screenshot-19.png" />
+        <img class="image2" src="https://i.ibb.co/KjWy771/Screenshot-20.png" />  
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/myZpVB8/Screenshot-17.png" />
+        <img class="image2" src="https://i.ibb.co/CBryxDD/Screenshot-18.png" />  
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/3C3n7R1/Screenshot-23.png" />
+        <img class="image2" src="https://i.ibb.co/G9jHf6G/Screenshot-24.png" />  
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row align-items-start">
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/MC1cbws/Screenshot-25.png" />
+        <img class="image2" src="https://i.ibb.co/FDbV1Qs/Screenshot-26.png" />  
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/9Y4Dv8V/Screenshot-27.png" />
+        <img class="image2" src="https://i.ibb.co/dBRgQvG/Screenshot-28.png" />  
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/ZH8cHt9/Screenshot-29.png" />
+        <img class="image2" src="https://i.ibb.co/8c3WMmN/Screenshot-30.png" />  
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row align-items-start">
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/dgCNtKZ/Screenshot-31.png" />
+        <img class="image2" src="https://i.ibb.co/hmn87kM/Screenshot-32.png" />  
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/KxFPs9v/Screenshot-33.png" />
+        <img class="image2" src="https://i.ibb.co/vzM32jc/Screenshot-34.png" />
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/09cjzJk/Screenshot-1.png" />
+      <img class="image2" src="https://i.ibb.co/4s7Bw2w/Screenshot-2.png" />
+            </div>
+        </div>
+      </div>
+        </div>
+      
+      </div>
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/vcTykzT/Screenshot-3.png" />
+      <img class="image2" src="https://i.ibb.co/nRVNML4/Screenshot-4.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/vcTykzT/Screenshot-3.png" />
+      <img class="image2" src="https://i.ibb.co/nRVNML4/Screenshot-4.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/Kw1r6Fc/Screenshot-5.png" />
+      <img class="image2" src="https://i.ibb.co/M5nJmgH/Screenshot-6.png" />
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/3BDVdyD/Screenshot-7.png" />
+      <img class="image2" src="https://i.ibb.co/0yZyjwm/Screenshot-8.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/chwy6Kq/Screenshot-9.png" />
+      <img class="image2" src="https://i.ibb.co/NVQR2w6/Screenshot-10.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/vPb2vG2/Screenshot-11.png" />
+      <img class="image2" src="https://i.ibb.co/6r9BJJ8/Screenshot-12.png" />
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/59HgBQs/Screenshot-13.png" />
+      <img class="image2" src="https://i.ibb.co/875QFCq/Screenshot-14.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/dLvr7mX/Screenshot-15.png" />
+      <img class="image2" src="https://i.ibb.co/s1nYnTK/Screenshot-16.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/kBJ4sqy/Screenshot-19.png" />
+      <img class="image2" src="https://i.ibb.co/y8mW4sX/Screenshot-20.png" />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/Y8j93rt/Screenshot-21.png" />
+      <img class="image2" src="https://i.ibb.co/wRQWNCP/Screenshot-22.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/PNZbDdX/Screenshot-23.png" />
+      <img class="image2" src="https://i.ibb.co/KVYTscG/Screenshot-24.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/v1qKcpr/Screenshot-25.png" />
+      <img class="image2" src="https://i.ibb.co/ZXXXVKS/Screenshot-26.png" />
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/PgCFyMC/Screenshot-27.png" />
+      <img class="image2" src="https://i.ibb.co/mqFQD4j/Screenshot-28.png" />
+          </div>
+          <div class="col">
+           <img class="image1" src="https://i.ibb.co/H25D2kM/Screenshot-29.png" />
+      <img class="image2" src="https://i.ibb.co/dggJJpg/Screenshot-30.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/y4pdn3p/Screenshot-31.png" />
+      <img class="image2" src="https://i.ibb.co/YdYC5qd/Screenshot-32.png" />
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/C5GKPm9/Screenshot-33.png" />
+      <img class="image2" src="https://i.ibb.co/7vXNfxg/Screenshot-34.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/T88Nqqv/Screenshot-35.png" />
+      <img class="image2" src="https://i.ibb.co/cFh8zR1/Screenshot-36.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/drfgfmG/Screenshot-37.png" />
+      <img class="image2" src="https://i.ibb.co/t8N5Rhv/Screenshot-38.png" />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/rpj7cq7/Screenshot-39.png" />
+      <img class="image2" src="https://i.ibb.co/Yp40RMW/Screenshot-40.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/rpj7cq7/Screenshot-39.png" />
+      <img class="image2" src="https://i.ibb.co/Yp40RMW/Screenshot-40.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/Jx0vZS3/Screenshot-41.png" />
+      <img class="image2" src="https://i.ibb.co/ZgRDyYf/Screenshot-42.png" />
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/YkYCwD2/Screenshot-43.png" />
+      <img class="image2" src="https://i.ibb.co/2h5wQj3/Screenshot-44.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/YcdZztY/Screenshot-45.png" />
+      <img class="image2" src="https://i.ibb.co/mSSQRNN/Screenshot-46.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/Rzwpyyw/Screenshot-47.png" />
+      <img class="image2" src="https://i.ibb.co/DrrR17C/Screenshot-48.png" />
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/2Fx5fDM/Screenshot-49.png" />
+      <img class="image2" src="https://i.ibb.co/kq6NqBh/Screenshot-50.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/5TB9GQS/Screenshot-51.png" />
+      <img class="image2" src="https://i.ibb.co/mHDhK0T/Screenshot-52.png" />
+          </div>
+          <div class="col">
+           <img class="image1" src="https://i.ibb.co/jTn96DY/Screenshot-53.png" />
+      <img class="image2" src="https://i.ibb.co/mt8CpFL/Screenshot-54.png" />
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="tab-pane fade" id="backpack" role="tabpanel" aria-labelledby="contact-tab"><div class="container">
+          <div class="row align-items-start">
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/mzWQfBy/green-backpack.png" />
+              <img class="image2" src="https://i.ibb.co/PQhPCzh/green-backpackres.png" />
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/xJkft1J/Screenshot-1.png" />
+        <img class="image2" src="https://i.ibb.co/ys9q6mr/Screenshot-2.png" />  
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/ThNR0wP/purple-backpack.png" />
+        <img class="image2" src="https://i.ibb.co/LQT7X91/purple-backpackres.png" />
+            </div>
+          </div>
+          </div></div>
+          
+        <div class="tab-pane fade" id="weapon" role="tabpanel" aria-labelledby="contact-tab"><div class="container">
+          <div class="row align-items-start">
+            
+          </div>
+          <div class="row align-items-center">
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/9nJcCZ5/Karma.png" />
+        <img class="image2" src="https://i.ibb.co/S6JkKTT/Karmares.png" />
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/VSbsdxF/komrad.png" />
+        <img class="image2" src="https://i.ibb.co/mHbfGVm/komradres.png" /> 
+            </div>
+            <div class="col">
+              <img class="image1" src="https://i.ibb.co/Z86CvzD/zeus.png" />
+        <img class="image2" src="https://i.ibb.co/59dZ7Lw/zeusres.png" />  
+            </div>
+          </div>
+        </div></div>
+        <div class="tab-pane fade" id="armor" role="tabpanel" aria-labelledby="contact-tab"> <div class="container"><div class="row align-items-start">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/D8fLsxq/Screenshot-1.png" />
+      <img class="image2" src="https://i.ibb.co/q7Gw26N/Screenshot-2.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/W5Hxp0c/Screenshot-3.png" />
+      <img class="image2" src="https://i.ibb.co/zH9Fknw/Screenshot-4.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/8KChbLS/Screenshot-9.png" />
+      <img class="image2" src="https://i.ibb.co/xmQF4yJ/Screenshot-10.png" />  
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/xs7BhGD/Screenshot-7.png" />
+      <img class="image2" src="https://i.ibb.co/fd04S12/Screenshot-8.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/9t7vVSh/Screenshot-5.png" />
+      <img class="image2" src="https://i.ibb.co/b38xh6f/Screenshot-6.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/Q6zLByD/Screenshot-11.png" />
+      <img class="image2" src="https://i.ibb.co/5GC68cs/Screenshot-12.png" />  
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/LYgkvhL/Screenshot-13.png" />
+      <img class="image2" src="https://i.ibb.co/k1FTsCN/Screenshot-14.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/KxJwCrG/Screenshot-15.png" />
+      <img class="image2" src="https://i.ibb.co/RBwPCJw/Screenshot-16.png" /> 
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/vkz0KBs/Screenshot-21.png" />
+      <img class="image2" src="https://i.ibb.co/6FHLFKB/Screenshot-22.png" />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/hgBwPdr/Screenshot-19.png" />
+      <img class="image2" src="https://i.ibb.co/KjWy771/Screenshot-20.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/myZpVB8/Screenshot-17.png" />
+      <img class="image2" src="https://i.ibb.co/CBryxDD/Screenshot-18.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/3C3n7R1/Screenshot-23.png" />
+      <img class="image2" src="https://i.ibb.co/G9jHf6G/Screenshot-24.png" />  
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/MC1cbws/Screenshot-25.png" />
+      <img class="image2" src="https://i.ibb.co/FDbV1Qs/Screenshot-26.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/9Y4Dv8V/Screenshot-27.png" />
+      <img class="image2" src="https://i.ibb.co/dBRgQvG/Screenshot-28.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/ZH8cHt9/Screenshot-29.png" />
+      <img class="image2" src="https://i.ibb.co/8c3WMmN/Screenshot-30.png" />  
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/dgCNtKZ/Screenshot-31.png" />
+      <img class="image2" src="https://i.ibb.co/hmn87kM/Screenshot-32.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/KxFPs9v/Screenshot-32.png" />
+      <img class="image2" src="https://i.ibb.co/vzM32jc/Screenshot-34.png" />
+          </div>
+          <div class="col">
+            <img class="image1" src="" />
+      <img class="image2" src="" />
+          </div>
+      </div>
+    </div></div>
+        <div class="tab-pane fade" id="consumable" role="tabpanel" aria-labelledby="contact-tab"><div class="container"><div class="row align-items-end">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/1mzRxwQ/Screenshot-1.png" />
+      <img class="image2" src="https://i.ibb.co/mXk4rwh/Screenshot-2.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/xm5Lt72/Screenshot-3.png" />
+      <img class="image2" src="https://i.ibb.co/khRdgKz/Screenshot-4.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/R9Cs582/Screenshot-5.png" />
+      <img class="image2" src="https://i.ibb.co/qkzpdBG/Screenshot-6.png" /> 
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/HCBNjzc/Screenshot-7.png" />
+      <img class="image2" src="https://i.ibb.co/qmVhyK0/Screenshot-8.png" />  
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/98Kd90r/Screenshot-9.png" />
+      <img class="image2" src="https://i.ibb.co/H7Hdh2x/Screenshot-10.png" /> 
+          </div>
+          <div class="col">
+            <img class="image1" src="https://i.ibb.co/wCzQPf5/Screenshot-11.png" />
+      <img class="image2" src="https://i.ibb.co/8NMnk3j/Screenshot-12.png" /> 
+          </div>
+          </div>
+    </div>
+        </div>
+    <div class="tab-pane fade" id="attachments" role="tabpanel" aria-labelledby="contact-tab"><div class="container">
+      <div class="row align-items-start">
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/09cjzJk/Screenshot-1.png" />
+      <img class="image2" src="https://i.ibb.co/4s7Bw2w/Screenshot-2.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/vcTykzT/Screenshot-3.png" />
+      <img class="image2" src="https://i.ibb.co/nRVNML4/Screenshot-4.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/Kw1r6Fc/Screenshot-5.png" />
+      <img class="image2" src="https://i.ibb.co/M5nJmgH/Screenshot-6.png" />
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/3BDVdyD/Screenshot-7.png" />
+      <img class="image2" src="https://i.ibb.co/0yZyjwm/Screenshot-8.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/chwy6Kq/Screenshot-9.png" />
+      <img class="image2" src="https://i.ibb.co/NVQR2w6/Screenshot-10.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/vPb2vG2/Screenshot-11.png" />
+      <img class="image2" src="https://i.ibb.co/6r9BJJ8/Screenshot-12.png" />
+        </div>
+      </div>
+      <div class="row align-items-end">
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/59HgBQs/Screenshot-13.png" />
+      <img class="image2" src="https://i.ibb.co/875QFCq/Screenshot-14.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/dLvr7mX/Screenshot-15.png" />
+          <img class="image2" src="https://i.ibb.co/s1nYnTK/Screenshot-16.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/C1SVgWS/Screenshot-17.png" />
+          <img class="image2" src="https://i.ibb.co/3FBcjzL/Screenshot-18.png" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/kBJ4sqy/Screenshot-19.png" />
+      <img class="image2" src="https://i.ibb.co/y8mW4sX/Screenshot-20.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/Y8j93rt/Screenshot-21.png" />
+      <img class="image2" src="https://i.ibb.co/wRQWNCP/Screenshot-22.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/PNZbDdX/Screenshot-23.png" />
+      <img class="image2" src="https://i.ibb.co/KVYTscG/Screenshot-24.png" />
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/v1qKcpr/Screenshot-25.png" />
+      <img class="image2" src="https://i.ibb.co/ZXXXVKS/Screenshot-26.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/PgCFyMC/Screenshot-27.png" />
+      <img class="image2" src="https://i.ibb.co/mqFQD4j/Screenshot-28.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/H25D2kM/Screenshot-29.png" />
+      <img class="image2" src="https://i.ibb.co/dggJJpg/Screenshot-30.png" />
+        </div>
+      </div>
+      <div class="row align-items-end">
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/y4pdn3p/Screenshot-31.png" />
+      <img class="image2" src="https://i.ibb.co/YdYC5qd/Screenshot-32.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/C5GKPm9/Screenshot-33.png" />
+      <img class="image2" src="https://i.ibb.co/7vXNfxg/Screenshot-34.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/T88Nqqv/Screenshot-35.png" />
+      <img class="image2" src="https://i.ibb.co/cFh8zR1/Screenshot-36.png" />
+        </div>
+      </div>
+    </div><div class="container">
+      <div class="row align-items-start">
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/drfgfmG/Screenshot-37.png" />
+      <img class="image2" src="https://i.ibb.co/t8N5Rhv/Screenshot-38.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/rpj7cq7/Screenshot-39.png" />
+      <img class="image2" src="https://i.ibb.co/Yp40RMW/Screenshot-40.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/Jx0vZS3/Screenshot-41.png" />
+      <img class="image2" src="https://i.ibb.co/ZgRDyYf/Screenshot-42.png" />
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/YkYCwD2/Screenshot-43.png" />
+      <img class="image2" src="https://i.ibb.co/2h5wQj3/Screenshot-44.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/YcdZztY/Screenshot-45.png" />
+      <img class="image2" src="https://i.ibb.co/mSSQRNN/Screenshot-46.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/Rzwpyyw/Screenshot-47.png" />
+      <img class="image2" src="https://i.ibb.co/DrrR17C/Screenshot-48.png" />
+        </div>
+      </div>
+      <div class="row align-items-end">
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/2Fx5fDM/Screenshot-49.png" />
+      <img class="image2" src="https://i.ibb.co/kq6NqBh/Screenshot-50.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/5TB9GQS/Screenshot-51.png" />
+      <img class="image2" src="https://i.ibb.co/mHDhK0T/Screenshot-52.png" />
+        </div>
+        <div class="col">
+          <img class="image1" src="https://i.ibb.co/jTn96DY/Screenshot-53.png" />
+      <img class="image2" src="https://i.ibb.co/mt8CpFL/Screenshot-54.png" />
+        </div>
+      </div>
+    </div></div>
+        
+    
+    
+    
+  
 </body>
 {% endblock %}
