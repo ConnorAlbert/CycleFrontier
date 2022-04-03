@@ -31,14 +31,14 @@
         background-image: url("https://cdn.discordapp.com/attachments/497275127264706561/957516181818974248/Untitled-222222.png");
         background-position: 0%;
         background-repeat: no-repeat;
-        background-size: 650px;
+        background-size: 660px;
         padding-top: 0px;
         padding-right: 0px;
         padding-bottom: 0px;
       }
       .collapse {
         position: sticky !important;
-        font-size: 25px;
+        font-size: 23px;
         background-image: url("https://cdn.discordapp.com/attachments/497275127264706561/957518354166468608/Untitled-2222223333.png");
         background-position: 100%;
         background-size: 600px;
@@ -46,11 +46,7 @@
         padding-right: 0px;
       }
 
-      body {
-        background-image: url("https://www.datocms-assets.com/57394/1640093323-thecyclefrontierkeyart1440pnologo.png?auto=format&w=2560");
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
+      
       .dropdown-menu {
         position: absolute;
         z-index: 1000;
@@ -68,6 +64,7 @@
         color: white;
       }
     </style>
+    {% block navbar %}
     <nav class="navbar navbar-expand-md navbar-dark">
       <button
         class="navbar-toggler"
@@ -124,6 +121,7 @@
                 >
               </li>
             </ul>
+            <li><a href="#" data-w-id="c66b3b9e-8533-cf7e-3626-5291fef080a4" class="nav-link" style="max-width: 940px;">Contact</a></li>
           </li>
         </ul>
         {% if current_user.is_authenticated %}
@@ -154,6 +152,7 @@
         {% endif %}
       </div>
     </nav>
+    {% endblock %}
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %} {% for category, message in messages %}
     <div class="alert alert-{{ category }}">

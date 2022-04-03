@@ -63,7 +63,7 @@ def first_map():
     return render_template('bright.html')
 
 
-@app.route('/cresent')
+@app.route('/crescent')
 def second_map():
     return render_template('crescent.html')
 
