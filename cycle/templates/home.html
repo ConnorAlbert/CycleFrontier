@@ -1,101 +1,79 @@
 {% extends 'base.html' %} {% block title %} The Cycle {% endblock %} {% block
 content %}
-
 <style>
+  .contact {
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s;
+    -moz-animation: fadeIn 4s;
+    -o-animation: fadeIn 4s;
+    -ms-animation: fadeIn 4s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   body {
-    background-color: black;
+    background-color: black !important;
   }
   .nav-link {
-    position: sticky !important;
-    font-size: 18px !important;
-    text-underline-position: none;
-    color: white !important;
-    text-decoration: none;
+    margin-top: 5px;
   }
 </style>
 
 <!DOCTYPE html>
 
 <html
-  data-wf-domain="connors-five-star-site-dbf8fe.webflow.io"
   data-wf-page="6249fd990967e01cc0541a51"
   data-wf-site="6249fd980967e0bd63541a0d"
 >
   <head>
     <link
-      href="https://uploads-ssl.webflow.com/6249fd980967e0bd63541a0d/css/connors-five-star-site-dbf8fe.webflow.3d50b5516.css"
+      href="{{ url_for('static',filename='styles/style.css') }}"
       rel="stylesheet"
-      type=""
-    />
-
+      type="text/css"
+    />  
   </head>
-  <body class="body">
-    <div class="contact-overlay wf-section">
-      <div class="w-container">
-        <a
-          href="#"
-          data-w-id="53a7664c-23a9-741b-01d1-3dbb83626754"
-          class="close-link"
-          >CLOSE ✕</a
-        >
-        <div class="form-wrapper">
-          <div class="contact-heading">Get in Touch</div>
-          <div class="small-divider"></div>
-          <div class="contact-text">
-            Thank you for your interest! Please fill out the form below if you
-            would like to work together.
-          </div>
-          <div class="w-form">
-            <form
-              id="email-form"
-              name="email-form"
-              data-name="Email Form"
-              method="get"
-            >
-              <input
-                type="text"
-                class="text-field w-input"
-                maxlength="256"
-                name="name"
-                data-name="Name"
-                placeholder="Enter your name"
-                id="name"
-              /><input
-                type="email"
-                class="text-field w-input"
-                maxlength="256"
-                name="email"
-                data-name="Email"
-                placeholder="Enter your email address"
-                id="email"
-                required=""
-              /><textarea
-                id="Project-details"
-                name="Project-details"
-                placeholder="What are your project details..."
-                maxlength="5000"
-                data-name="Project details"
-                class="text-field text-area w-input"
-              ></textarea
-              ><input
-                type="submit"
-                value="Send"
-                data-wait="Please wait..."
-                class="submit-button w-button"
-              />
-            </form>
-            <div class="success-message w-form-done">
-              <p class="success-text">
-                Thank you! Your submission has been received!
-              </p>
-            </div>
-            <div class="w-form-fail">
-              <p>Oops! Something went wrong while submitting the form</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   
     <div class="hero-section home-page-hero wf-section">
       <h1
         style="
@@ -133,7 +111,7 @@ content %}
           >
             <a href="/crafting" class="hero-tile w-inline-block"
               ><div class="tile-text">Crafting</div>
-              <div class="sssss"></div
+              <div class="tile"></div
             ></a>
           </div>
           <div
@@ -174,7 +152,7 @@ content %}
                 rotateY(0) rotateZ(0) skew(0, 0);
               opacity: 0;
             "
-            class="_33block"
+            class="contact"
           >
             <div class="hero-tile">
               <div class="w-dyn-list">
@@ -182,7 +160,7 @@ content %}
                   <div role="listitem" class="w-dyn-item">
                     <a href="/bright" class="tile-link w-inline-block"
                       ><div class="tile-text">Bright Sands</div>
-                      <div class="sssss sdsfsdfsd"></div
+                      <div class="tile mytile"></div
                     ></a>
                   </div>
                 </div>
@@ -202,16 +180,25 @@ content %}
                 rotateY(0) rotateZ(0) skew(0, 0);
               opacity: 0;
             "
-            class="_33block"
+            class="contact"
           >
             <a
               href="crescent"
               data-ix="show-contact-overlay"
               class="hero-tile w-inline-block"
               ><div class="tile-text">Crescent falls</div>
-              <div class="sssss dsfdfd"></div
+              <div class="tile mytile"></div
             ></a>
           </div>
+          <a href="contact" class="">
+          <img
+            src="https://uploads-ssl.webflow.com/6249fd980967e0bd63541a0d/624a322ea0949a45b6b2381f_download%20(1)_cleanup.jpg"
+            loading="lazy"
+            width="267"
+            alt=""
+            class="contact"
+          />
+        </a>
         </div>
       </div>
     </div>
@@ -222,12 +209,10 @@ content %}
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://uploads-ssl.webflow.com/6249fd980967e0bd63541a0d/js/webflow.61a3f0b23.js"
+      src="{{ url_for('static',filename='styles/main.js') }}"
       type="text/javascript"
     ></script>
-    <!--[if lte IE 9
-      ]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script
-    ><![endif]-->
+    
   </body>
 </html>
 
