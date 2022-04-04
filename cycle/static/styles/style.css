@@ -1,6 +1,16 @@
-
-
-
+/* Generated on: Mon Apr 04 2022 19:01:01 GMT+0000 (Coordinated Universal Time) */
+/* ==========================================================================
+   normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
+   ========================================================================== */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
 article,
 aside,
 details,
@@ -11,7 +21,7 @@ header,
 hgroup,
 main,
 menu,
-
+nav,
 section,
 summary {
   display: block;
@@ -56,7 +66,9 @@ mark {
   background: #ff0;
   color: #000;
 }
-
+small {
+  font-size: 80%;
+}
 sub,
 sup {
   font-size: 75%;
@@ -89,12 +101,19 @@ pre {
 code,
 kbd,
 pre,
-
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
 button,
 input,
 optgroup,
 select,
-
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
 button {
   overflow: visible;
 }
@@ -188,7 +207,9 @@ th {
 .w-icon-slider-left:before {
   content: "\e601";
 }
-
+.w-icon-nav-menu:before {
+  content: "\e602";
+}
 .w-icon-arrow-down:before,
 .w-icon-dropdown-toggle:before {
   content: "\e603";
@@ -1109,7 +1130,42 @@ textarea.w-select {
   white-space: normal;
   text-align: left;
 }
-
+.w-slider-nav {
+  position: absolute;
+  z-index: 2;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding-top: 10px;
+  height: 40px;
+  text-align: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.w-slider-nav.w-round > div {
+  border-radius: 100%;
+}
+.w-slider-nav.w-num > div {
+  width: auto;
+  height: auto;
+  padding: 0.2em 0.5em;
+  font-size: inherit;
+  line-height: inherit;
+}
+.w-slider-nav.w-shadow > div {
+  box-shadow: 0 0 3px rgba(51, 51, 51, 0.4);
+}
+.w-slider-nav-invert {
+  color: #fff;
+}
+.w-slider-nav-invert > div {
+  background-color: rgba(34, 34, 34, 0.4);
+}
+.w-slider-nav-invert > div.w-active {
+  background-color: #222;
+}
 .w-slider-dot {
   position: relative;
   display: inline-block;
@@ -1254,7 +1310,10 @@ textarea.w-select {
 .w-dropdown-link:focus {
   outline: 0;
 }
-
+@media screen and (max-width: 767px) {
+  .w-nav-brand {
+    padding-left: 10px;
+  }
 }
 .w-lightbox-backdrop {
   color: #000;
@@ -1639,7 +1698,155 @@ textarea.w-select {
   margin-left: 15px;
   clear: none;
 }
-
+.w-nav {
+  position: relative;
+  background: #dddddd;
+  z-index: 1000;
+}
+.w-nav:before,
+.w-nav:after {
+  content: " ";
+  display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
+}
+.w-nav:after {
+  clear: both;
+}
+.w-nav-brand {
+  position: relative;
+  float: left;
+  text-decoration: none;
+  color: #333333;
+}
+.w-nav-link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: #222222;
+  padding: 20px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+.w-nav-link.w--current {
+  color: #0082f3;
+}
+.w-nav-menu {
+  position: relative;
+  float: right;
+}
+[data-nav-menu-open] {
+  display: block !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #c8c8c8;
+  text-align: center;
+  overflow: visible;
+  min-width: 200px;
+}
+.w--nav-link-open {
+  display: block;
+  position: relative;
+}
+.w-nav-overlay {
+  position: absolute;
+  overflow: hidden;
+  display: none;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.w-nav-overlay [data-nav-menu-open] {
+  top: 0;
+}
+.w-nav[data-animation="over-left"] .w-nav-overlay {
+  width: auto;
+}
+.w-nav[data-animation="over-left"] .w-nav-overlay,
+.w-nav[data-animation="over-left"] [data-nav-menu-open] {
+  right: auto;
+  z-index: 1;
+  top: 0;
+}
+.w-nav[data-animation="over-right"] .w-nav-overlay {
+  width: auto;
+}
+.w-nav[data-animation="over-right"] .w-nav-overlay,
+.w-nav[data-animation="over-right"] [data-nav-menu-open] {
+  left: auto;
+  z-index: 1;
+  top: 0;
+}
+.w-nav-button {
+  position: relative;
+  float: right;
+  padding: 18px;
+  font-size: 24px;
+  display: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.w-nav-button:focus {
+  outline: 0;
+}
+.w-nav-button.w--open {
+  background-color: #c8c8c8;
+  color: white;
+}
+.w-nav[data-collapse="all"] .w-nav-menu {
+  display: none;
+}
+.w-nav[data-collapse="all"] .w-nav-button {
+  display: block;
+}
+.w--nav-dropdown-open {
+  display: block;
+}
+.w--nav-dropdown-toggle-open {
+  display: block;
+}
+.w--nav-dropdown-list-open {
+  position: static;
+}
+@media screen and (max-width: 991px) {
+  .w-nav[data-collapse="medium"] .w-nav-menu {
+    display: none;
+  }
+  .w-nav[data-collapse="medium"] .w-nav-button {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .w-nav[data-collapse="small"] .w-nav-menu {
+    display: none;
+  }
+  .w-nav[data-collapse="small"] .w-nav-button {
+    display: block;
+  }
+  .w-nav-brand {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .w-nav[data-collapse="tiny"] .w-nav-menu {
+    display: none;
+  }
+  .w-nav[data-collapse="tiny"] .w-nav-button {
+    display: block;
+  }
+}
 .w-tabs {
   position: relative;
 }
@@ -1717,13 +1924,46 @@ textarea.w-select {
   display: none !important;
 }
 
+/* ==========================================================================
+      Start of custom Webflow CSS
+      ========================================================================== */
+body {
+  font-family: Lato, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
 
-
+h1 {
+  position: relative;
+  z-index: 10;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: Lato, sans-serif;
+  color: #fff;
+  font-size: 34px;
+  line-height: 45px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
 
 p {
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 25px;
+}
+
+a {
+  -webkit-transition: color 400ms ease;
+  transition: color 400ms ease;
+  color: #25ac6a;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #000;
 }
 
 img {
@@ -1779,7 +2019,15 @@ blockquote {
   background-image: none;
 }
 
-
+.nav {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: transparent;
+}
 
 .logo-text {
   margin-top: 11px;
@@ -1793,7 +2041,42 @@ blockquote {
   margin-top: 3px;
 }
 
+.nav-link {
+  opacity: 0.6;
+  -webkit-transition: opacity 350ms ease;
+  transition: opacity 350ms ease;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
+.nav-link:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.nav-link.w--current {
+  opacity: 1;
+  color: #fff;
+}
+
+.nav-link.contact {
+  margin-top: 9px;
+  margin-left: 30px;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: hsla(0, 0%, 100%, 0.3);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.nav-link.footer-link {
+  margin-top: 0px;
+  padding: 10px;
+  float: right;
+  text-decoration: none;
+}
 
 .section {
   padding-top: 60px;
@@ -1813,10 +2096,13 @@ blockquote {
 
 .hero-container {
   position: relative;
-  top: -70px;
-  margin-top: -98px;
+  top: -250px;
+  margin-top: -200px;
   padding: 5px;
+  border: 1px none #000;
+  border-radius: 0px;
   background-color: grey;
+  opacity: 1;
 }
 
 .hero-container.project-container {
@@ -2101,19 +2387,21 @@ blockquote {
   top: 0%;
   right: 0%;
   bottom: 0%;
-  height: 100%;
+  display: block;
+  height: 150%;
   border-radius: 0px;
   background-color: rgba(0, 0, 0, 0.6);
-  background-image: url("https://uploads-ssl.webflow.com/6249fd980967e0bd63541a0d/624a18394644a29ed56205e3_1643111877-the_cycle_frontier_keyart_1440p-_3_%20(1).png");
+  background-image: url("https://uploads-ssl.webflow.com/6249fd980967e0bd63541a0d/624b3fd803d6a517bdeb8274_1646331661-tcf_ws_home_02_gameoverview_slide_06.jpg");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: repeat;
+  background-attachment: fixed;
   font-size: 14px;
   text-align: right;
   background-clip: border-box;
   -webkit-text-fill-color: inherit;
-  -o-object-fit: fill;
-  object-fit: fill;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .cta-section {
@@ -2446,6 +2734,19 @@ blockquote {
     padding-left: 114px;
   }
 
+  .nav {
+    padding-top: 10px;
+  }
+
+  .nav-link.contact {
+    margin-bottom: 11px;
+    background-color: hsla(0, 0%, 100%, 0);
+  }
+
+  .nav-link.footer-link {
+    margin-top: 9px;
+  }
+
   .section.top-section {
     padding-bottom: 0px;
   }
@@ -2465,6 +2766,9 @@ blockquote {
     background-color: #55acee;
   }
 
+  .nav-menu {
+    background-color: #242424;
+  }
 
   .contact-overlay {
     display: none;
@@ -2514,6 +2818,21 @@ blockquote {
 
   .logo-text {
     margin-bottom: 19px;
+  }
+
+  .nav-link.contact {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding: 20px;
+  }
+
+  .nav-link.footer-link {
+    float: none;
+  }
+
+  .nav-link.footer-link.contact {
+    float: none;
   }
 
   .section {
@@ -2624,6 +2943,15 @@ blockquote {
     font-size: 26px;
   }
 
+  .nav-link.footer-link {
+    display: block;
+    font-size: 13px;
+  }
+
+  .nav-link.footer-link.contact {
+    padding: 9px;
+    font-size: 13px;
+  }
 
   .section {
     padding-top: 40px;
