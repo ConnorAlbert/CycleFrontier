@@ -72,3 +72,7 @@ def second_map():
 def crafting_page():
     return render_template('crafting.html')
 
+@app.route('/contact')
+def contact_page():
+    return render_template('contact.html')    
+
