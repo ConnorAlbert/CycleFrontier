@@ -1,4 +1,4 @@
-/* Generated on: Mon Apr 04 2022 19:01:01 GMT+0000 (Coordinated Universal Time) */
+/* Generated on: Tue Apr 05 2022 06:30:24 GMT+0000 (Coordinated Universal Time) */
 /* ==========================================================================
    normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
    ========================================================================== */
@@ -1949,28 +1949,6 @@ h1 {
   text-transform: uppercase;
 }
 
-p {
-  margin-bottom: 10px;
-  font-size: 18px;
-  line-height: 25px;
-}
-
-a {
-  -webkit-transition: color 400ms ease;
-  transition: color 400ms ease;
-  color: #25ac6a;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #000;
-}
-
-img {
-  display: inline-block;
-  max-width: 100%;
-}
-
 blockquote {
   margin-bottom: 10px;
   padding: 10px 20px;
@@ -2041,51 +2019,9 @@ blockquote {
   margin-top: 3px;
 }
 
-.nav-link {
-  opacity: 0.6;
-  -webkit-transition: opacity 350ms ease;
-  transition: opacity 350ms ease;
-  color: #fff;
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.nav-link:hover {
-  opacity: 1;
-  color: #fff;
-}
-
-.nav-link.w--current {
-  opacity: 1;
-  color: #fff;
-}
-
-.nav-link.contact {
-  margin-top: 9px;
-  margin-left: 30px;
-  padding: 10px;
-  border-radius: 2px;
-  background-color: hsla(0, 0%, 100%, 0.3);
-  font-size: 12px;
-  line-height: 18px;
-}
-
-.nav-link.footer-link {
-  margin-top: 0px;
-  padding: 10px;
-  float: right;
-  text-decoration: none;
-}
-
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-.section.top-section {
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 
 .section.gray-section {
@@ -2096,7 +2032,7 @@ blockquote {
 
 .hero-container {
   position: relative;
-  top: -250px;
+  top: 300px;
   margin-top: -200px;
   padding: 5px;
   border: 1px none #000;
@@ -2139,15 +2075,71 @@ blockquote {
   transition: transform 1000ms ease;
   transition: transform 1000ms ease, -webkit-transform 1000ms ease;
 }
+.contact {
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  background-color: black !important;
+}
+.nav-link {
+  margin-top: 5px;
+}
 .tile:hover {
   -webkit-transform: scale(1.03);
   -ms-transform: scale(1.03);
   transform: scale(1.03);
 }
 
-.tile.mytile {
-  background-image: url("https://uploads-ssl.webflow.com/6249fd980967e0bd63541a0d/624a002ca72d6603766ad729_Screenshot-36.png");
+.tile.mytiles {
+  background-image: url("https://i.ibb.co/TkTKwbq/Screenshot-36.png");
 }
 
 .tile.mytile {
@@ -2264,9 +2256,13 @@ blockquote {
   bottom: 0px;
   width: 100%;
   height: 100%;
-  background-image: url("https://uploads-ssl.webflow.com/6249fd980967e0bd63541a0d/624a0738dd06aa6742239393_download.jpg");
-  background-position: 0px 0px;
-  background-size: contain;
+  background-image: url("https://media.istockphoto.com/vectors/coming-soon-neon-banner-vector-template-glowing-night-bright-sign-vector-id1144514162?k=20&m=1144514162&s=612x612&w=0&h=2mkQDmXYQ48LwS0lr0oTUXmF9VLChnemFWLRgBDJi58=");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  
+  
 }
 
 .contact-overlay {
@@ -2382,9 +2378,9 @@ blockquote {
 }
 
 .hero-overlay {
-  position: absolute;
+  position: fixed;
   left: 0%;
-  top: 0%;
+  top: 8%;
   right: 0%;
   bottom: 0%;
   display: block;
@@ -2718,6 +2714,20 @@ blockquote {
   border: 1px none #000;
 }
 
+@media screen and (min-width: 1920px) {
+  .hero-section.home-page-hero {
+    position: relative;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+  }
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 30px;
@@ -2838,16 +2848,6 @@ blockquote {
   .section {
     padding-right: 20px;
     padding-left: 20px;
-  }
-
-  .section.top-section.home-page {
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-
-  .hero-container {
-    top: auto;
-    padding: 5px 0px;
   }
 
   .tile-text {
