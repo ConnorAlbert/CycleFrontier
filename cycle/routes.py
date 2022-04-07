@@ -1,7 +1,7 @@
 from cycle import app
 from flask import render_template, redirect, url_for, flash, request
 from cycle.models import User
-from cycle.forms import RegisterForm, LoginForm
+from cycle.forms import RegisterForm, LoginForm, contactForm
 from cycle import db
 from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -50,6 +50,13 @@ def login_page():
 
     return render_template('login.html', form=form)
 
+
+@app.route("/", methods=["GET", "POST"])
+def home():
+    cform=contactForm()
+    if cform.validate_on_submit():
+            print(f"Name:{cform.name.data}, E-mail:{cform.email.data},message:{cform.message.data}")
+    return render_template("contact.html",form=cform)
 
 @app.route('/logout')
 def logout_page():

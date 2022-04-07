@@ -117,11 +117,6 @@ $(function()
           text-decoration: underline;
         }
 
-        /* IE 6 */
-        * html #orig_article_block {
-        position:absolute;
-        top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
-        }
       </style>
         </head>
   <body >
@@ -132,7 +127,8 @@ $(function()
         <p>
            Please send your message below. We will get back to you at the earliest!
         </p>
-        <form role="form" method="post" id="reused_form">
+        <form method="POST" action="{{ url_for('home') }}">
+            {{ form.csrf_token }}>
             
             <div class="row">
                 <div class="col-sm-12 form-group">
