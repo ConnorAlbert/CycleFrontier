@@ -1,11 +1,15 @@
 from cycle import app
 from flask import render_template, redirect, url_for, flash, request
 from cycle.models import User
-from cycle.forms import RegisterForm, LoginForm, contactForm
+from cycle.forms import RegisterForm, LoginForm, ContactForm, csrf
 from cycle import db
-from flask_login import login_user, logout_user, login_required, current_user
+from flask_login import login_user, logout_user
 from werkzeug.security import generate_password_hash, check_password_hash
+from cycle.__init__ import mail
+from flask_mail import Message
 
+
+csrf.init_app(app)
 
 @app.route('/')
 @app.route('/home')
@@ -51,18 +55,33 @@ def login_page():
     return render_template('login.html', form=form)
 
 
-@app.route("/", methods=["GET", "POST"])
-def home():
-    cform=contactForm()
-    if cform.validate_on_submit():
-            print(f"Name:{cform.name.data}, E-mail:{cform.email.data},message:{cform.message.data}")
-    return render_template("contact.html",form=cform)
 
 @app.route('/logout')
 def logout_page():
     logout_user()
     flash("You have been logged out!", category='info')
     return redirect(url_for("home_page"))
+
+@app.route('/contact', methods=['POST', 'GET'])
+def contact():
+    form = ContactForm()
+    if form.validate_on_submit():        
+        send_message(request.form)
+        return redirect('/success')    
+
+    return render_template('contact.html', form=form)
+
+@app.route('/success')
+def success():
+    return render_template('home.html')
+
+def send_message(message):
+
+    msg = Message(message.get('subject'), sender = message.get('email'),
+            recipients = ['connoralbert23@hotmail.com'],
+            body= message.get('message')
+    )  
+    mail.send(msg)
 
 
 @app.route('/bright')
@@ -79,7 +98,4 @@ def second_map():
 def crafting_page():
     return render_template('crafting.html')
 
-@app.route('/contact')
-def contact_page():
-    return render_template('contact.html')    
 
