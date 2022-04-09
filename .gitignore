@@ -10,8 +10,7 @@ public/*
 .env*
 !.env.example
 docker-compose.override.yml
-main.js
-style.css
+static
 
 ### Python ####################################################################
 
