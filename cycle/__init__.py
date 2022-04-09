@@ -4,6 +4,8 @@ from flask_login import LoginManager
 from flask_mail import Mail
 import os
 from os import environ
+from dotenv import load_dotenv
+load_dotenv('.env')
 
 
 
