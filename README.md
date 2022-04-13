@@ -12,7 +12,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Screenshot_7]https://cycle-frontier.herokuapp.com/)
+![Screenshot_7](https://github.com/ConnorAlbert/CycleFrontier/issues/1#issue-1203825365)
 
 The Cycle is a informative and helpful crafting and maps page for The Cycle Frontier.
 Includes a functional login, register, and contact page.
@@ -27,7 +27,7 @@ Includes a functional login, register, and contact page.
 
 ## Usage
 Crafting Page with option to view all items or by item needed.
-![Screenshot_8]https://cycle-frontier.herokuapp.com/crafting)
+![Screenshot_8](https://user-images.githubusercontent.com/92011318/163280042-0e7d0cb1-d0bf-4f30-a29c-206cad150780.png)
 
 
 
