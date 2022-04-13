@@ -15,7 +15,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Screenshot_7](https://user-images.githubusercontent.com/92011318/163277179-bfa19938-5f49-4c00-b963-c00c8155ec58.png)](https://example.com)
+![Screenshot_7](https://cycle-frontier.herokuapp.com/)
 
 There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
 
