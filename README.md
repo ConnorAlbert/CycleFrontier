@@ -12,7 +12,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Screenshot_7](https://github.com/ConnorAlbert/CycleFrontier/issues/1#issue-1203825365)
+![Screenshot_11](https://user-images.githubusercontent.com/92011318/163287637-de3cedcd-aa13-4420-84a7-3f3eea4aa770.png)
 
 The Cycle is a informative and helpful crafting and maps page for The Cycle Frontier.
 Includes a functional login, register, and contact page.
@@ -27,7 +27,26 @@ Includes a functional login, register, and contact page.
 
 ## Usage
 Crafting Page with option to view all items or by item needed.
-![Screenshot_8](https://user-images.githubusercontent.com/92011318/163280042-0e7d0cb1-d0bf-4f30-a29c-206cad150780.png)
+
+![Hnet com-image (12)](https://user-images.githubusercontent.com/92011318/163287946-d7e93e01-d31b-4f5d-a731-d8ad27045dd3.png)
+
+### Maps page
+
+![Hnet com-image (10)](https://user-images.githubusercontent.com/92011318/163287903-8b49e0bc-824d-4aaf-af62-5af67bc8cc6a.png)
+
+### Login page
+
+![Hnet com-image (8)](https://user-images.githubusercontent.com/92011318/163287906-3e8aeaf7-3612-4e52-852b-ea3b7df94e05.png)
+
+### Register page
+
+![Hnet com-image (9)](https://user-images.githubusercontent.com/92011318/163287908-fd2d1ca1-f647-4bfc-a0f1-a30636fd3684.png)
+
+### Contact page
+
+![Hnet com-image (13)](https://user-images.githubusercontent.com/92011318/163288023-2767ecee-506a-45ce-be11-c8d36569252f.png)
+
+
 
 
 
