@@ -5,7 +5,7 @@
 * [Built With](#built-with)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
-* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
 
 
