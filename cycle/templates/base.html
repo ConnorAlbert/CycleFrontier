@@ -22,54 +22,6 @@
     <title>{% block title %} {% endblock %}</title>
   </head>
   <body>
-    <style>
-      .navbar {
-        background-image: url("https://cdn.discordapp.com/attachments/497275127264706561/957516181818974248/Untitled-222222.png");
-        background-position: 0% ;
-        background-repeat: no-repeat ;
-        background-size: 670px;
-        padding-top: 0px ;
-        padding-right: 0px ;
-        padding-bottom: 0px;
-      }
-      .collapse {
-        position: sticky !important;
-        font-size: 24px !important;
-        background-image: url("https://cdn.discordapp.com/attachments/497275127264706561/957518354166468608/Untitled-2222223333.png");
-        background-position: 100% ;
-        background-size: 600px ;
-        background-repeat: no-repeat ;
-        padding-right: 0px ;
-        padding-bottom: 3px;
-      }
-
-      
-      .dropdown-menu {
-        position: absolute ;
-        z-index: 1000 ;
-        background-color: #5C5C5C ;
-
-        
-      }
-      .dropdown-item:hover {
-        background-color: rgb(65, 65, 65);
-      }
-      .nav-link:hover {
-        background-color: rgb(65, 65, 65);
-        color: black;
-      }
-
-      body {
-        background-image: url(https://www.datocms-assets.com/57394/1646331661-tcf_ws_home_02_gameoverview_slide_06.jpg?auto=format&w=1920);
-      }
-      .alert {
-        position:absolute;
-        width: 100%;
-      }
-      .alert-danger {
-        position: relative;
-      }
-    </style>
     {% block navbar %}
     <nav class="navbar navbar-expand-md navbar-dark">
       <button
@@ -177,7 +129,54 @@
       {{ message }}
     </div>
     {% endfor %} {% endif %} {% endwith %} {% block content %} {% endblock %}
-   
+    <style>
+      .navbar {
+        background-image: url("https://cdn.discordapp.com/attachments/497275127264706561/957516181818974248/Untitled-222222.png");
+        background-position: 0% ;
+        background-repeat: no-repeat ;
+        background-size: 670px;
+        padding-top: 0px ;
+        padding-right: 0px ;
+        padding-bottom: 0px;
+      }
+      .collapse {
+        position: sticky !important;
+        font-size: 24px !important;
+        background-image: url("https://cdn.discordapp.com/attachments/497275127264706561/957518354166468608/Untitled-2222223333.png");
+        background-position: 100% ;
+        background-size: 600px ;
+        background-repeat: no-repeat ;
+        padding-right: 0px ;
+        padding-bottom: 3px;
+      }
+
+      
+      .dropdown-menu {
+        position: absolute ;
+        z-index: 1000 ;
+        background-color: #5C5C5C ;
+
+        
+      }
+      .dropdown-item:hover {
+        background-color: rgb(65, 65, 65);
+      }
+      .nav-link:hover {
+        background-color: rgb(65, 65, 65);
+        color: black;
+      }
+
+      body {
+        background-image: url(https://www.datocms-assets.com/57394/1646331661-tcf_ws_home_02_gameoverview_slide_06.jpg?auto=format&w=1920);
+      }
+      .alert {
+        position:absolute;
+        width: 100%;
+      }
+      .alert-danger {
+        position: relative;
+      }
+    </style>
   </body>
 
   
