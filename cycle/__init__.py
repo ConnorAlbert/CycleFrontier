@@ -10,6 +10,7 @@ load_dotenv('.env')
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cycle.db'
+SQLAlchemy_DATABASE_URI = os.environ.get('DATABASE_URL')
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
