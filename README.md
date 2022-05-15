@@ -77,5 +77,5 @@ Crafting Page with option to view all items or by item needed.
 * [Gunicorn](https://gunicorn.org/)
 * [Flask-Mail](https://pythonhosted.org/Flask-Mail/)
 * [Flask_SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
-* [Werkzeug](https://werkzeug.palletsprojects.com/en/2.1.x/)
+
 
