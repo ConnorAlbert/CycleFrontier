@@ -71,10 +71,6 @@ Crafting Page with option to view all items or by item needed.
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [WTForms](https://wtforms.readthedocs.io/en/3.0.x/)
-* [Gunicorn](https://gunicorn.org/)
 
 
 
