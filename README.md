@@ -76,6 +76,6 @@ Crafting Page with option to view all items or by item needed.
 * [WTForms](https://wtforms.readthedocs.io/en/3.0.x/)
 * [Gunicorn](https://gunicorn.org/)
 * [Flask-Mail](https://pythonhosted.org/Flask-Mail/)
-* [Flask_SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
+
 
 
