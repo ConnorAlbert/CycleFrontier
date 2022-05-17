@@ -17,8 +17,9 @@ https://cycle-frontier.herokuapp.com/
 
 ![Screenshot_11](https://user-images.githubusercontent.com/92011318/163287637-de3cedcd-aa13-4420-84a7-3f3eea4aa770.png)
 
-The Cycle is a informative and helpful crafting and maps page for The Cycle Frontier.
-Includes a functional login, register, and contact page.
+The Cycle includes a stunning home page with links to crafting, maps, and contact page.
+PostgreSQL is used for login/register with enhanced user security with validation and
+deployed with Heroku.
 
 ### Built With
 * [Python](https://www.python.org/)
@@ -70,11 +71,7 @@ Crafting Page with option to view all items or by item needed.
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [WTForms](https://wtforms.readthedocs.io/en/3.0.x/)
-* [Gunicorn](https://gunicorn.org/)
-* [Flask-Mail](https://pythonhosted.org/Flask-Mail/)
-* [Flask_SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
-* [Werkzeug](https://werkzeug.palletsprojects.com/en/2.1.x/)
+
+
+
 
