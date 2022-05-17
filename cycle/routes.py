@@ -11,6 +11,7 @@ from flask_mail import Message
 
 csrf.init_app(app)
 
+
 @app.route('/')
 @app.route('/home')
 def home_page():
@@ -21,8 +22,10 @@ def home_page():
 def register_page():
     form = RegisterForm()
     if form.validate_on_submit():
-        hashed_password = generate_password_hash(form.password1.data, method='sha256')
-        new_user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+        hashed_password = generate_password_hash(
+            form.password1.data, method='sha256')
+        new_user = User(username=form.username.data,
+                        email=form.email.data, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
         login_user(new_user)
@@ -55,32 +58,34 @@ def login_page():
     return render_template('login.html', form=form)
 
 
-
 @app.route('/logout')
 def logout_page():
     logout_user()
     flash("You have been logged out!", category='info')
     return redirect(url_for("home_page"))
 
+
 @app.route('/contact', methods=['POST', 'GET'])
 def contact():
     form = ContactForm()
-    if form.validate_on_submit():        
+    if form.validate_on_submit():
         send_message(request.form)
-        return redirect('/success')    
+        return redirect('/success')
 
     return render_template('contact.html', form=form)
+
 
 @app.route('/success')
 def success():
     return render_template('home.html')
 
+
 def send_message(message):
 
-    msg = Message(message.get('subject'), sender = message.get('email'),
-            recipients = ['connoralbert23@hotmail.com'],
-            body= message.get('message')
-    )  
+    msg = Message(message.get('subject'), sender=message.get('email'),
+                  recipients=['connoralbert23@hotmail.com'],
+                  body=message.get('message')
+                  )
     mail.send(msg)
 
 
@@ -97,5 +102,3 @@ def second_map():
 @app.route('/crafting')
 def crafting_page():
     return render_template('crafting.html')
-
-
