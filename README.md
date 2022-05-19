@@ -58,7 +58,7 @@ Crafting Page with option to view all items or by item needed.
 <!-- ROADMAP -->
 ## Roadmap
 
-* [x] Home pag
+* [x] Home page
 * [x] Crafting page
 * [x] Maps page
 * [x] Login page
