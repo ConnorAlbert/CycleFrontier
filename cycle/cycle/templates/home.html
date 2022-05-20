@@ -80,7 +80,7 @@ content %}
               <div class="w-dyn-list">
                 <div role="list" class="w-dyn-items">
                   <div role="listitem" class="w-dyn-item">
-                    <a href="/bright" class="tile-link w-inline-block"
+                    <a href="/bright" class="tile-links w-inline-block"
                       ><div class="tile-text">Bright Sands</div>
                       <div class="tile mytile"></div
                     ></a>
@@ -104,23 +104,22 @@ content %}
             "
             class="contact"
           >
-            <a
-              href="crescent"
-              data-ix="show-contact-overlay"
-              class="hero-tile w-inline-block"
-              ><div class="tile-text">Crescent falls</div>
-              <div class="tile mytiles"></div
-            ></a>
-          </div>
-          <a href="contact">
-          <img
-            src="https://media.istockphoto.com/photos/contact-us-shaped-neon-light-on-black-wall-picture-id1140384857?k=20&m=1140384857&s=170667a&w=0&h=9wpmdDj_xqKwPauRz2RnqswJ3LTn1_D_z4xUYwh6gy8="
-            loading="lazy"
-            width="267"
-            alt=""
-            class="contact"
-          />
-        </a>
+          <a
+          href="crescent"
+          data-ix="show-contact-overlay"
+          class="hero-tile w-inline-block"
+          ><div class="tile-text">Crescent falls</div>
+          <div class="tile mytiles"></div
+        ></a>
+      </div>
+      <a href="contact">
+      <img
+        src="/static/images/contact.jpg"
+        width="267"
+        alt=""
+        class="contact"
+      />
+    </a>
         </div>
       </div>
     </div>
@@ -135,6 +134,26 @@ content %}
       type="text/javascript"
     ></script>
   </body>
+  <style>
+    .contact {
+      transition: transform .2s; /* Animation */
+      margin: 0 auto;
+    }
+    
+    .contact:hover {
+      transform: scale(1.01); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+    .hero-tile {
+      transition: transform .2s; /* Animation */
+      margin: 0 auto;
+    }
+    
+    .hero-tile:hover {
+      transform: scale(1.01); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+    
+    </style>
+    
 </html>
 
 {% endblock %} 
