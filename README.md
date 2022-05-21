@@ -8,7 +8,7 @@ https://cycle-frontier.herokuapp.com/
 * [Built With](#built-with)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
-
+* [Acknowledgements](#acknowledgements)
 
 
 
