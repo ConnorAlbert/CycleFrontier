@@ -22,7 +22,7 @@
     <a href="https://github.com/ConnorAlbert/CycleFrontier"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://cycle-frontier.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/ConnorAlbert/CycleFrontier/issues">Report Bug</a>
     ·
