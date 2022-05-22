@@ -29,5 +29,5 @@ mail_settings = {
 app.config.update(mail_settings)
 mail = Mail(app)
 
-
 from cycle import routes
+
